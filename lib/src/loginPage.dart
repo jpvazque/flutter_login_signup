@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
               padding: EdgeInsets.only(left: 0, top: 10, bottom: 10),
               child: Icon(Icons.keyboard_arrow_left, color: Colors.black),
             ),
-            Text('Back',
+            Text('Regresar',
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500))
           ],
         ),
@@ -76,9 +76,9 @@ class _LoginPageState extends State<LoginPage> {
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+              colors: [Color(0xff40B491), Color(0xff246752)])),
       child: Text(
-        'Login',
+        'Iniciar sesión',
         style: TextStyle(fontSize: 20, color: Colors.white),
       ),
     );
@@ -100,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          Text('or'),
+          Text('ó'),
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
@@ -120,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _facebookButton() {
     return Container(
       height: 50,
-      margin: EdgeInsets.symmetric(vertical: 20),
+      margin: EdgeInsets.only(top: 20, bottom: 18),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
@@ -153,7 +153,7 @@ class _LoginPageState extends State<LoginPage> {
                     topRight: Radius.circular(5)),
               ),
               alignment: Alignment.center,
-              child: Text('Log in with Facebook',
+              child: Text('Iniciar sesión con Facebook',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -172,23 +172,23 @@ class _LoginPageState extends State<LoginPage> {
             context, MaterialPageRoute(builder: (context) => SignUpPage()));
       },
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 20),
+        margin: EdgeInsets.only(top: 3, bottom: 12),
         padding: EdgeInsets.all(15),
         alignment: Alignment.bottomCenter,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Don\'t have an account ?',
+              '¿No tienes una cuenta?',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
             ),
             SizedBox(
               width: 10,
             ),
             Text(
-              'Register',
+              'Regístrate',
               style: TextStyle(
-                  color: Color(0xfff79c4f),
+                  color: Color(0xff39A282),
                   fontSize: 13,
                   fontWeight: FontWeight.w600),
             ),
@@ -202,21 +202,20 @@ class _LoginPageState extends State<LoginPage> {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-          text: 'd',
           style: GoogleFonts.portLligatSans(
-            textStyle: Theme.of(context).textTheme.display1,
+            textStyle: Theme.of(context).textTheme.headline4,
             fontSize: 30,
             fontWeight: FontWeight.w700,
-            color: Color(0xffe46b10),
+            color: Color(0xff339175),
           ),
           children: [
             TextSpan(
-              text: 'ev',
+              text: 'easy',
               style: TextStyle(color: Colors.black, fontSize: 30),
             ),
             TextSpan(
-              text: 'rnz',
-              style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
+              text: 'Job',
+              style: TextStyle(color: Color(0xff2A876C), fontSize: 30),
             ),
           ]),
     );
@@ -225,8 +224,8 @@ class _LoginPageState extends State<LoginPage> {
   Widget _emailPasswordWidget() {
     return Column(
       children: <Widget>[
-        _entryField("Email id"),
-        _entryField("Password", isPassword: true),
+        _entryField("Correo electrónico"),
+        _entryField("Contraseña", isPassword: true),
       ],
     );
   }
@@ -259,13 +258,12 @@ class _LoginPageState extends State<LoginPage> {
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 10),
                     alignment: Alignment.centerRight,
-                    child: Text('Forgot Password ?',
+                    child: Text('¿Olvidaste tu contraseña?',
                         style: TextStyle(
                             fontSize: 14, fontWeight: FontWeight.w500)),
                   ),
                   _divider(),
                   _facebookButton(),
-                  SizedBox(height: height * .055),
                   _createAccountLabel(),
                 ],
               ),

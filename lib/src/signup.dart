@@ -26,7 +26,7 @@ class _SignUpPageState extends State<SignUpPage> {
               padding: EdgeInsets.only(left: 0, top: 10, bottom: 10),
               child: Icon(Icons.keyboard_arrow_left, color: Colors.black),
             ),
-            Text('Back',
+            Text('Regresar',
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500))
           ],
         ),
@@ -75,9 +75,9 @@ class _SignUpPageState extends State<SignUpPage> {
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+              colors: [Color(0xff40B491), Color(0xff246752)])),
       child: Text(
-        'Register Now',
+        'Regístrate ahora',
         style: TextStyle(fontSize: 20, color: Colors.white),
       ),
     );
@@ -97,16 +97,16 @@ class _SignUpPageState extends State<SignUpPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Already have an account ?',
+              '¿Ya tienes una cuenta?',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
             ),
             SizedBox(
               width: 10,
             ),
             Text(
-              'Login',
+              'Iniciar sesion',
               style: TextStyle(
-                  color: Color(0xfff79c4f),
+                  color: Color(0xff39A282),
                   fontSize: 13,
                   fontWeight: FontWeight.w600),
             ),
@@ -120,21 +120,20 @@ class _SignUpPageState extends State<SignUpPage> {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-          text: 'd',
           style: GoogleFonts.portLligatSans(
-            textStyle: Theme.of(context).textTheme.display1,
+            textStyle: Theme.of(context).textTheme.headline4,
             fontSize: 30,
             fontWeight: FontWeight.w700,
-            color: Color(0xffe46b10),
+            color: Color(0xff339175),
           ),
           children: [
             TextSpan(
-              text: 'ev',
+              text: 'easy',
               style: TextStyle(color: Colors.black, fontSize: 30),
             ),
             TextSpan(
-              text: 'rnz',
-              style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
+              text: 'Job',
+              style: TextStyle(color: Color(0xff2A876C), fontSize: 30),
             ),
           ]),
     );
@@ -143,9 +142,9 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _emailPasswordWidget() {
     return Column(
       children: <Widget>[
-        _entryField("Username"),
-        _entryField("Email id"),
-        _entryField("Password", isPassword: true),
+        _entryField("Nombre de usuario"),
+        _entryField("Correo electrónico"),
+        _entryField("Contraseña", isPassword: true),
       ],
     );
   }
@@ -180,7 +179,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       height: 20,
                     ),
                     _submitButton(),
-                    SizedBox(height: height * .14),
+                    SizedBox(height: height * .04),
                     _loginAccountLabel(),
                   ],
                 ),
